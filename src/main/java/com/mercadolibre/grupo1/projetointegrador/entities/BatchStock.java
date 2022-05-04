@@ -1,10 +1,13 @@
 package com.mercadolibre.grupo1.projetointegrador.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Nayara Coca
@@ -43,4 +46,5 @@ public class BatchStock {
     public Double getVolume() {
         return product.getVolume() * currentQuantity;
     }
+
 }

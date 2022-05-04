@@ -6,7 +6,6 @@ import com.mercadolibre.grupo1.projetointegrador.entities.enums.OrderStatus;
 import com.mercadolibre.grupo1.projetointegrador.exceptions.ListIsEmptyException;
 import com.mercadolibre.grupo1.projetointegrador.exceptions.MissingProductExceptions;
 import com.mercadolibre.grupo1.projetointegrador.exceptions.UnregisteredProducts;
-import com.mercadolibre.grupo1.projetointegrador.exceptions.UnregisteredUser;
 import com.mercadolibre.grupo1.projetointegrador.repositories.BatchStockRepository;
 import com.mercadolibre.grupo1.projetointegrador.repositories.CustomerRepository;
 import com.mercadolibre.grupo1.projetointegrador.repositories.ProductRepository;
@@ -48,7 +47,7 @@ public class PurchaseOrderServiceImpl implements PurchaseOrderService {
    // _________________________________________________________________________________________________
 
     //Valida se o cliente possui autorização para fechar a compra
-    public void validation(PurchaseOrder purchaseOrder,Customer customerRole){
+    public void validation(PurchaseOrder purchaseOrder, Customer customerRole){
         if (!customerRole.getId().equals(purchaseOrder.getCustomer().getId())){
             throw new ListIsEmptyException("Cliente informado nao tem permissao para alterar essa compra");
         }
