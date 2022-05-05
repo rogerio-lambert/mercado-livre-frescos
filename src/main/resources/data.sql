@@ -7,9 +7,9 @@ INSERT INTO users(id, username, email, password) VALUES
     (4, 'agent2', 'agent2@mercadolibre.com', '123456'),
     (5, 'customer1', 'customer1@mercadolibre.com', '123456'),
     (6, 'customer2', 'customer2@mercadolibre.com', '123456'),
-    (7, 'agent3', 'agent3@mercadolibre.com', '123456');
-    (8, 'courier1', 'courier1@mercadolibre.com', '123456')
-    (9, 'customer3', 'customer3@mercadolibre.com', '123456'),
+    (7, 'agent3', 'agent3@mercadolibre.com', '123456'),
+    (8, 'courier1', 'courier1@mercadolibre.com', '123456'),
+    (9, 'customer3', 'customer3@mercadolibre.com', '123456');
 
 INSERT INTO warehouses(id, address, name) VALUES
     (1, '11111-000', 'SP'),
@@ -28,7 +28,10 @@ INSERT INTO users_roles(user_id, role_id) VALUES
     (3, 1),
     (4, 1),
     (5, 3),
-    (6, 3);
+    (6, 3),
+    (7, 1),
+    (8, 4),
+    (9, 3);
 
 INSERT INTO sections(id, capacity, category, description, warehouse_id) VALUES
     (1, 500, 'FRESCO', 'sessao SP 1', 1),
@@ -118,7 +121,7 @@ INSERT INTO purchase_order(id, created_date, updated_date, order_status, custome
 (1, '2022-05-01 00:00:00', '2022-05-01 00:00:00', 'OPENED', 5),
 (2, '2022-05-01 00:00:00', '2022-05-01 00:00:00', 'OPENED', 6),
 
-(3, '2022-05-01 00:00:00', '2022-05-01 00:00:00', 'CLOSED', 9),
+(3, '2022-05-01 00:00:00', '2022-05-01 00:00:00', 'CLOSED', 6),
 (4, '2022-05-01 00:00:00', '2022-05-01 00:00:00', 'CLOSED', 9);
 
 INSERT INTO purchase_items(id, quantity, product_id, purchase_order_id) VALUES
@@ -126,16 +129,16 @@ INSERT INTO purchase_items(id, quantity, product_id, purchase_order_id) VALUES
 (2, 5, 2, 1),
 
 (3, 2, 3, 2),
-(4, 7, 4, 2);
+(4, 7, 4, 2),
 
 (5, 2, 3, 3),
-(6, 7, 4, 3);
-(1, 3, 1, 4),
-(2, 5, 2, 4),
+(6, 7, 4, 3),
+(7, 3, 1, 4),
+(8, 5, 2, 4);
 
 INSERT INTO deliveries(id, purchase_order_id, delivery_address, delivery_schedule, courier_id) VALUES
-(1, 5, 'rua a, 1000', '2022-05-01 00:00:00', 8),
-(2, 5, 'rua b, 1000', '2022-05-01 00:00:00', 8),
-(3, 5, 'rua c, 1000', '2022-05-01 00:00:00', 8),
-(4, 5, 'rua d, 1000', '2022-05-01 00:00:00', 8),
+(1, 3, 'rua a, 1000', '2022-05-01 00:00:00', 8),
+(2, 3, 'rua b, 1000', '2022-05-01 00:00:00', 8),
+(3, 4, 'rua c, 1000', '2022-05-01 00:00:00', 8),
+(4, 4, 'rua d, 1000', '2022-05-01 00:00:00', 8);
 

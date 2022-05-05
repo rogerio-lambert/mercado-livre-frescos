@@ -1,6 +1,7 @@
 package com.mercadolibre.grupo1.projetointegrador.entities;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Data
 @Table(name = "deliveries")
 public class Delivery {

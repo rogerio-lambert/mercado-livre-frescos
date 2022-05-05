@@ -10,9 +10,9 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
-@Table("couriers")
+@Table(name = "couriers")
 public class Courier extends AuthenticableUser {
-    @OneToMany(mappedBy = "Delivery", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "courier", cascade = CascadeType.ALL)
     private List<Delivery> deliveries;
 
     public Courier (AuthenticableUser user, List<Delivery> deliveries) {
