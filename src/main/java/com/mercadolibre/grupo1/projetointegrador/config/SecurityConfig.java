@@ -41,6 +41,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             BASE_URL + "/warehouse"
     };
 
+    private static final String[] SWAGGER_REQUESTS = {
+            // -- Swagger UI v2
+            "/v2/api-docs",
+            "/swagger-resources",
+            "/swagger-resources/**",
+            "/configuration/ui",
+            "/configuration/security",
+            "/swagger-ui.html",
+            "/webjars/**",
+            // -- Swagger UI v3 (OpenAPI)
+            "/v3/api-docs/**",
+            "/swagger-ui/**"
+    };
+
     private static final String[] CUSTOMER_REQUESTS = {
             BASE_URL + "/orders",
             BASE_URL + "/orders/**"
@@ -86,6 +100,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .antMatchers(AGENT_REQUESTS).hasRole("AGENT")
                     .antMatchers(CUSTOMER_REQUESTS).hasRole("CUSTOMER")
 
+                    .antMatchers(SWAGGER_REQUESTS).permitAll()
                     .antMatchers("/h2-console/**").permitAll()
                     .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 
@@ -107,7 +122,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/h2-console/**");
+        web.ignoring().antMatchers("h2-console/**");
     }
 
     private JWTValidationFilter getValidationFilter() throws Exception {
