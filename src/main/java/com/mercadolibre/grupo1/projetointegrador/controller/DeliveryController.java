@@ -64,6 +64,7 @@ public class DeliveryController {
     }
 
     //Endpoint responsável por comandar a criação de uma nova entrega
+    @PostMapping("/")
     public ResponseEntity<DeliveryDTO> createDelivery(@Valid @RequestBody DeliveryDTO deliveryDTO,
                                                       UriComponentsBuilder uriBuilder){
         DeliveryDTO deliveryDTOCreated = deliveryService.createDelivery(deliveryDTO);
