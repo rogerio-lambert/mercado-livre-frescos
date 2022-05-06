@@ -17,7 +17,7 @@ Endpoints do Projeto Integrador
 
 ## Diagrama de Classe
 
-![DiagramaClassesMercadoLivreFresco (GRUPO 1)](https://user-images.githubusercontent.com/78379011/166461615-35c49514-c2b5-4355-9189-e6a7837bdea0.png)
+![DiagramaClassesMercadoLivreFresco (GRUPO 1)](./UML-Entities.jpg)
 
 ## Requisitos
 
