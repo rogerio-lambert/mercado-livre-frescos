@@ -1,14 +1,10 @@
 package com.mercadolibre.grupo1.projetointegrador.unit;
 
 import com.mercadolibre.grupo1.projetointegrador.dtos.PurchaseOrderDTO;
-import com.mercadolibre.grupo1.projetointegrador.entities.Customer;
-import com.mercadolibre.grupo1.projetointegrador.entities.Product;
-import com.mercadolibre.grupo1.projetointegrador.entities.PurchaseItem;
-import com.mercadolibre.grupo1.projetointegrador.entities.PurchaseOrder;
+import com.mercadolibre.grupo1.projetointegrador.entities.*;
 import com.mercadolibre.grupo1.projetointegrador.entities.enums.OrderStatus;
 import com.mercadolibre.grupo1.projetointegrador.exceptions.MissingProductExceptions;
 import com.mercadolibre.grupo1.projetointegrador.exceptions.UnregisteredProducts;
-import com.mercadolibre.grupo1.projetointegrador.exceptions.UnregisteredUser;
 import com.mercadolibre.grupo1.projetointegrador.repositories.BatchStockRepository;
 import com.mercadolibre.grupo1.projetointegrador.repositories.CustomerRepository;
 import com.mercadolibre.grupo1.projetointegrador.repositories.ProductRepository;

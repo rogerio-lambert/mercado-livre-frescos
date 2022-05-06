@@ -17,7 +17,7 @@ Endpoints do Projeto Integrador
 
 ## Diagrama de Classe
 
-![DiagramaClassesMercadoLivreFresco (GRUPO 1)](https://user-images.githubusercontent.com/78379011/166461615-35c49514-c2b5-4355-9189-e6a7837bdea0.png)
+![DiagramaClassesMercadoLivreFresco (GRUPO 1)](./UML-Entities.jpg)
 
 ## Requisitos
 
@@ -30,6 +30,8 @@ Endpoints do Projeto Integrador
 [X] [Requisito 04](https://drive.google.com/file/d/1kNZLztafr2tXuDU24W9xwUu09va2kMP0/view)
 
 [X] [Requisito 05](https://drive.google.com/file/d/1yiEzdwI87K7AO9bgPffHbb0DPjVKM-oP/view)
+
+[X] [Requisito 06](./Requisito_6-Rogério_Lambert.pdf)
 
 ## Ferramentas e Tecnologias
 - [Java](https://docs.oracle.com/en/java/)
