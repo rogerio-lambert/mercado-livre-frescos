@@ -13,7 +13,7 @@ Endpoints do Projeto Integrador
 
 ## Postman
 
-[Link do Postman](https://www.getpostman.com/collections/a26a80aef9f833ed8132)
+[Link do Postman](./PI_-_Meli_Frescos.postman_collection.json)
 
 ## Diagrama de Classe
 
