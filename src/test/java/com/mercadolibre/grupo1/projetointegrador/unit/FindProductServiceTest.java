@@ -6,7 +6,6 @@ import com.mercadolibre.grupo1.projetointegrador.entities.enums.SortingType;
 import com.mercadolibre.grupo1.projetointegrador.exceptions.EntityNotFoundException;
 import com.mercadolibre.grupo1.projetointegrador.exceptions.ProductNotAvailable;
 import com.mercadolibre.grupo1.projetointegrador.repositories.BatchStockRepository;
-import com.mercadolibre.grupo1.projetointegrador.services.AgentService;
 import com.mercadolibre.grupo1.projetointegrador.services.FindProductsService;
 import com.mercadolibre.grupo1.projetointegrador.services.WarehouseService;
 import org.junit.jupiter.api.DisplayName;

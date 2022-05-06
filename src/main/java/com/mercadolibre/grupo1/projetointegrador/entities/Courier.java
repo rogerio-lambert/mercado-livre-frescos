@@ -5,6 +5,12 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.List;
 
+/**
+ * @author Rogério Lambert
+ * Classe responsavavel pela configuração da entidade(e tabela no BD) de entregador,
+ * sendo parte do requisito 6
+ */
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor

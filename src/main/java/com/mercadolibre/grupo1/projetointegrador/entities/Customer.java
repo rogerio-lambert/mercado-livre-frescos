@@ -1,9 +1,7 @@
 package com.mercadolibre.grupo1.projetointegrador.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -18,7 +16,8 @@ import java.util.List;
  */
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "customers")
@@ -28,4 +27,13 @@ public class Customer extends AuthenticableUser {
     @JsonIgnore
     @OneToMany(mappedBy = "customer")
     private List<PurchaseOrder> orders = new ArrayList<>();
+
+    public Customer (AuthenticableUser user, String cpf) {
+        super.setId(user.getId());
+        super.setEmail(user.getEmail());
+        super.setUsername(user.getUsername());
+        super.setPassword(user.getUsername());
+        super.setRoles(user.getRoles());
+        this.cpf = cpf;
+    }
 }

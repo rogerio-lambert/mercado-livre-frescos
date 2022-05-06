@@ -8,6 +8,11 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+/**
+ * @author Rogério Lambert
+ * classe responsavavel pela configuração da entidade(e tabela no BD) de entrega,
+ * sendo parte do requisito 6
+ */
 
 @Entity
 @AllArgsConstructor
