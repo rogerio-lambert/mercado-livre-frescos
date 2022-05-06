@@ -31,6 +31,8 @@ Endpoints do Projeto Integrador
 
 [X] [Requisito 05](https://drive.google.com/file/d/1yiEzdwI87K7AO9bgPffHbb0DPjVKM-oP/view)
 
+[X] [Requisito 06](./Requisito_6-Rogério_Lambert.pdf)
+
 ## Ferramentas e Tecnologias
 - [Java](https://docs.oracle.com/en/java/)
 - [SpringBoot](https://spring.io/projects/spring-boot)
