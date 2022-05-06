@@ -42,7 +42,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     };
 
     private static final String[] CUSTOMER_REQUESTS = {
-            BASE_URL + "/orders", BASE_URL + "/orders/**"
+            BASE_URL + "/orders",
+            BASE_URL + "/orders/**"
     };
 
     private static final String[] PUBLIC_POST_REQUESTS = {
@@ -87,6 +88,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                     .antMatchers("/h2-console/**").permitAll()
                     .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+
+                    .antMatchers(BASE_URL + "/delivery/courier/list").hasRole("COURIER")
+                    .antMatchers(BASE_URL + "/delivery/courier/*").hasRole("COURIER")
+                    .antMatchers(HttpMethod.PUT, BASE_URL + "/delivery/*").hasAnyRole("COURIER", "AGENT")
+                    .antMatchers(HttpMethod.POST, BASE_URL + "/delivery/").hasRole("AGENT")
+                    .antMatchers(BASE_URL + "/delivery/customer/list").hasRole("CUSTOMER")
+                    .antMatchers(BASE_URL + "/delivery/customer/*").hasAnyRole("CUSTOMER", "AGENT")
+
                     .anyRequest().authenticated()
                 .and()
                 .exceptionHandling()
@@ -98,7 +107,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("h2-console/**");
+        web.ignoring().antMatchers("/h2-console/**");
     }
 
     private JWTValidationFilter getValidationFilter() throws Exception {

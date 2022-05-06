@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "410e938e-5900-40e6-92ad-a5b2f535a387",
+		"_postman_id": "7ebb47ca-fee9-4254-88ab-149b7137a4b9",
 		"name": "PI - Meli Frescos",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -257,6 +257,16 @@
 				{
 					"name": "Req3-Busca todos lotes do produto 3 de um representate 1 da warehouse 1 ordenado por id de lote (testa filtro de 3 semana de prazo para vencer)",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZ2VudDEiLCJleHAiOjE2NTE2ODkwNDN9.9wLOaolWxWIxX7u7RiAdIhIqMfxjoC8rcEWgnziG_G4",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -280,6 +290,16 @@
 				{
 					"name": "Req3-Busca todos lotes do produto 1 de um representate 1 da warehouse 1 ordenado por quantidade",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZ2VudDEiLCJleHAiOjE2NTE2ODkwNDN9.9wLOaolWxWIxX7u7RiAdIhIqMfxjoC8rcEWgnziG_G4",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -506,6 +526,396 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Requisito 6 (Rogério Lambert)",
+			"item": [
+				{
+					"name": "Busca uma entrega de um entregador",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjb3VyaWVyMSIsImV4cCI6MTY1MTc4MjYyMX0.FyFY0er4UlpQY0h2QY7r6VWJ22-oUkQqSPnvG_xubF8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/fresh-products/delivery/courier/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"fresh-products",
+								"delivery",
+								"courier",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta uma entrega por um representante",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZ2VudDMiLCJleHAiOjE2NTE4MzE5NTh9.HgF6kzFDOS9q-wZB143LotcU8zfrr-RO3iKWIOb-fJs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/fresh-products/delivery/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"fresh-products",
+								"delivery",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca todas as entregas de um entregador",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjb3VyaWVyMSIsImV4cCI6MTY1MTc4MjYyMX0.FyFY0er4UlpQY0h2QY7r6VWJ22-oUkQqSPnvG_xubF8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/fresh-products/delivery/courier/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"fresh-products",
+								"delivery",
+								"courier",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca uma entrega de um cliente (ou um representante)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZ2VudDMiLCJleHAiOjE2NTE4NzQ0NDZ9.oa_-1pSpnvPNqFsNag5kJhU2oFVtY5EZMEuVYHM2E3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/fresh-products/delivery/customer/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"fresh-products",
+								"delivery",
+								"customer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cria uma entrega",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZ2VudDMiLCJleHAiOjE2NTE4MzA0Njl9.AfF8laBJyeNgWLvfGI637VT-zFzZwKbUnGAtKPDaUYw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": null,\n    \"deliverySchedule\": \"2022-05-01T00:00:00\",\n    \"purchaseOrderId\": 3,\n    \"deliveryAddress\": \"rua nova, 1000\",\n    \"courierId\": 8\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/fresh-products/delivery/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"fresh-products",
+								"delivery",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verifica o lançamento de exceções caso falte informações validadas no DeliveryDTO",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZ2VudDMiLCJleHAiOjE2NTE4Nzk1Mzh9.ASWds6Ymk9kOCn8jB6f-Ec8yTwh8uYg8QZQmizCMyUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": null,\n    \"deliverySchedule\": \"2022-05-01T00:00:00\",\n    \"purchaseOrderId\": null,\n    \"deliveryAddress\": \"rua nova, 1000\",\n    \"courierId\": 8\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/fresh-products/delivery/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"fresh-products",
+								"delivery",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edita uma entrega",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZ2VudDMiLCJleHAiOjE2NTE4MzA0Njl9.AfF8laBJyeNgWLvfGI637VT-zFzZwKbUnGAtKPDaUYw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 5,\n    \"deliverySchedule\": \"2022-05-01T00:00:00\",\n    \"purchaseOrderId\": 3,\n    \"deliveryAddress\": \"rua velha, 1000\",\n    \"courierId\": 8\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/fresh-products/delivery/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"fresh-products",
+								"delivery",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca todas as entrega de um cliente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdXN0b21lcjMiLCJleHAiOjE2NTE3OTIyNDd9._Eo9KVwlHKW524yXbEYNqOL77FWxmpCgt_jvajvQ7pc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/fresh-products/delivery/customer/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"fresh-products",
+								"delivery",
+								"customer",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autenticacao-de-entregador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"courier1\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticacao-de-cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"customer3\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticacao-de-representante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"agent3\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
